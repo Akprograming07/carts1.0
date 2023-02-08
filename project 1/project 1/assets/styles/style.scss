@@ -1,0 +1,446 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Gilroy";
+}
+
+$PRIMARY_COLOR: #071c35;
+$NEUTRAL_COLOR: #f8fafe;
+$ACCENT_COLOR: #8b94a3;
+
+.Neutral {
+    // background-color: #f8fafe;
+    // background-color: $PRIMARY_COLOR;
+}
+
+// @media (prefers-color-scheme: dark) {
+//   .day.dark-scheme   { background:  #333; color: white; }
+//   .night.dark-scheme { background: black; color:  #ddd; }
+// }
+
+// @media (prefers-color-scheme: light) {
+//   .day.light-scheme   { background: white; color:  #555; }
+//   .night.light-scheme { background:  #eee; color: black; }
+// }
+
+.Primary {
+    color: #071c35;
+    // color: $NEUTRAL_COLOR;
+}
+
+.accent {
+    color: #8b94a3;
+}
+
+.container {
+    width: 1800px;
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-container {
+    height: 80px;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .navbar {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .logo {
+            height: 30px;
+            margin-right: 4vmax;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            ul {
+                list-style: none;
+                display: flex;
+                // width: 30%;
+                align-items: center;
+
+                a {
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 15px;
+                }
+            }
+            .left-nav-links li {
+                margin-right: 4vmax;
+            }
+            .right-nav-links {
+                li {
+                    &:nth-child(2) {
+                        list-style-type: disc;
+                        margin: 0 4vmax;
+                    }
+                }
+                button {
+                    background-color: transparent;
+                    border: 1px rgb(86, 88, 88) solid;
+                    padding: 10px 15px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: $PRIMARY_COLOR;
+                        color: $NEUTRAL_COLOR;
+                        transition: all 0.2s ease-in-out;
+                    }
+                }
+            }
+            .close-btn {
+                display: none;
+            }
+        }
+
+        .menu-btn {
+            display: none;
+            padding: 10px;
+            background-color: transparent;
+            border: none;
+            border-radius: 5px;
+            border: 1px solid $PRIMARY_COLOR;
+            background-color: $NEUTRAL_COLOR;
+            color: $PRIMARY_COLOR;
+            cursor: pointer;
+            &:hover {
+                background-color: $PRIMARY_COLOR;
+                color: $NEUTRAL_COLOR;
+                transition: all 0.2s ease-in-out;
+            }
+        }
+    }
+}
+
+.HERO_SECTION {
+    position: relative;
+    top: 80px;
+    display: flex;
+    padding: 5vmax 0;
+    align-items: center;
+    justify-content: space-between;
+
+    .hero-text-content {
+        max-width: 40%;
+        .hero-small-heading {
+            display: flex;
+            align-items: center;
+
+            i {
+                margin-right: 10px;
+                font-size: 26px;
+                color: $PRIMARY_COLOR;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+        .hero-main-heading {
+            font-size: 5vmax;
+            margin: 2vmax 0;
+        }
+
+        .app-store-btns {
+            margin-top: 4vmax;
+            display: flex;
+            width: 100%;
+            img {
+                height: 3vmax;
+                margin-right: 1vmax;
+            }
+        }
+    }
+
+    .hero-img-container {
+        width: 60%;
+        position: absolute;
+        top: -10%;
+
+        right: 0px;
+        transform: translate(0%, -10%);
+        img {
+            width: 100%;
+        }
+    }
+    margin-bottom: 10vmax;
+}
+
+.cards-wraper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2vmax;
+    .card {
+        position: relative;
+        max-width: 15vmax;
+        border-radius: 3vmax;
+        padding: 2vmax;
+
+        img {
+            height: 5vmax;
+        }
+        .card-text-content {
+            color: $NEUTRAL_COLOR;
+            h3 {
+                font-size: 1.5vmax;
+                margin: 1vmax 0;
+            }
+            p {
+                margin: 1vmax 0;
+                font-size: 1vmax;
+            }
+        }
+    }
+    .card1 {
+        background: linear-gradient(309.74deg, #01b4db 2.28%, #86e6fb 85.74%);
+    }
+    .card2 {
+        background: linear-gradient(309.52deg, #1a1a1c 2.28%, #4b4d51 95.07%);
+    }
+    .card3 {
+        background: linear-gradient(308.31deg, #f2505b 2.33%, #fd959a 86.51%);
+    }
+    .card4 {
+        background: linear-gradient(309.7deg, #064dc2 2.28%, #327af3 85.25%);
+    }
+    .card5 {
+        background: linear-gradient(309.7deg, #da800b 2.28%, #fcaf49 85.25%);
+    }
+}
+
+.warranty-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    .warranty-section-img-wraper {
+        width: 60%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .warranty-section-text-content {
+        width: 40%;
+        h1 {
+            font-size: 3vmax;
+            margin: 2vmax 0;
+            color: $PRIMARY_COLOR;
+        }
+        p {
+            font-weight: 500;
+            font-size: 1vmax;
+            color: #8b94a3;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .navbar-container {
+        position: fixed;
+        .navbar {
+            display: flex;
+            align-items: center;
+            position: static;
+            justify-content: space-between;
+            .logo {
+                height: 3vmax;
+                margin-right: 2vmax;
+            }
+            .links-container {
+                background-color: #000000ea;
+                width: 100vw;
+                height: 100vh;
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 10;
+
+                ul {
+                    list-style: none;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    a {
+                        color: $NEUTRAL_COLOR;
+                        text-decoration: none;
+                        font-weight: 500;
+                        font-size: 14px;
+                    }
+                    li {
+                        margin: 3vmax 0;
+                    }
+                }
+                .left-nav-links li {
+                    margin: 3vmax 0;
+                }
+                .right-nav-links {
+                    li {
+                        &:nth-child(2) {
+                            list-style-type: none;
+                            margin: 3vmax 0;
+                        }
+                    }
+                    button {
+                        color: $NEUTRAL_COLOR;
+                    }
+                }
+                .close-btn {
+                    display: block;
+                    position: absolute;
+                    top: -2.2vmax;
+                    right: 0.9vmax;
+                    margin-top: 30px;
+                    background-color: transparent;
+                    border: none;
+                    color: $NEUTRAL_COLOR;
+                    font-size: 4.5vmax;
+                    padding: 10px 15px;
+                    cursor: pointer;
+                }
+            }
+
+            .menu-btn {
+                display: block;
+            }
+        }
+    }
+
+    .HERO_SECTION {
+        position: relative;
+        flex-direction: column;
+        justify-content: initial;
+        max-height: auto;
+        width: 100%;
+        align-items: initial;
+        .hero-text-content {
+            max-width: 100%;
+            .hero-small-heading {
+                display: flex;
+                align-items: center;
+
+                i {
+                    margin-right: 10px;
+                    font-size: 26px;
+                    color: $PRIMARY_COLOR;
+                }
+                p {
+                    font-size: 15px;
+                }
+            }
+            .hero-main-heading {
+                font-size: 5vmax;
+                margin: 2vmax 0;
+            }
+
+            .app-store-btns {
+                margin-top: 4vmax;
+
+                img {
+                    height: 5vmax;
+                    margin-right: 1vmax;
+                }
+            }
+        }
+
+        .hero-img-container {
+            position: absolute;
+            top: 10%;
+            transform: translateY(-20%);
+            z-index: -1;
+            width: 100%;
+            opacity: 0.3;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cards-wraper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 2vmax;
+
+        .card {
+            max-width: 100vmax;
+            padding: 4vmax;
+            img {
+                height: 10vmax;
+            }
+            .card-text-content {
+                color: $NEUTRAL_COLOR;
+                h3 {
+                    font-size: 3.5vmax;
+                    margin: 2vmax 0;
+                }
+                p {
+                    margin: 2vmax 0;
+                    font-size: 2.6vmax;
+                }
+            }
+        }
+    }
+
+    .warranty-section {
+        display: flex;
+        flex-direction: column;
+        align-items: initial;
+        .warranty-section-img-wraper {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            opacity: 0.2;
+            img {
+                width: 100%;
+            }
+        }
+
+        .warranty-section-text-content {
+            width: 100%;
+            h1 {
+                font-size: 5vmax;
+                margin: 2vmax 0;
+                color: $PRIMARY_COLOR;
+            }
+            p {
+                font-weight: 400;
+                font-size: 2.2vmax;
+                color: #8b94a3;
+            }
+        }
+    }
+}
